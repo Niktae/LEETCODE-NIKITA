@@ -5,12 +5,12 @@ class Solution {
         for(int right=0;right<nums.length;right++){
             currSum+=nums[right];
             while(currSum>=target){
-               // min=Math.min(right-left+1,min);
-               if(right-left+1<min){
+               min=Math.min(right-left+1,min);
+               /*if(right-left+1<min){
                 min=right-left+1;
-               }
-            currSum-=nums[left];
-            left++;
+               }*/
+                currSum-=nums[left];
+                left++;
             }
         }
         if(min==Integer.MAX_VALUE) return 0;
