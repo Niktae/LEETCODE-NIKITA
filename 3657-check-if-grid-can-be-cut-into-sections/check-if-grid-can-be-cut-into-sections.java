@@ -10,7 +10,7 @@ class Solution {
         }
         return check(xvalue)||check(yvalue);
     }
-    public boolean check(int [][] intervals){
+    private boolean check(int [][] intervals){
         Arrays.sort(intervals,(a,b)->Integer.compare(a[0],b[0]));
         int sections=0;
         int maxIdx=intervals[0][1];
