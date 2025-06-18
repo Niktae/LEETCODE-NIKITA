@@ -4,12 +4,14 @@ class Solution {
         int n=nums.length;
         while(r<n){
             if(nums[r]==0)zeroes++;
-            while(zeroes>k){
+            if(zeroes>k){
                 if(nums[l]==0)zeroes--;
                 l++;
             }
-            len=r-l+1;
-            maxlen=Math.max(len,maxlen);
+            if(zeroes<=k){
+                len=r-l+1;
+                maxlen=Math.max(len,maxlen);
+            }
             r++;
         }
         return maxlen; //tc-0(2n)
