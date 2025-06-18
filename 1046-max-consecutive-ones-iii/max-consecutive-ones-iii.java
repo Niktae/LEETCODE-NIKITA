@@ -12,6 +12,6 @@ class Solution {
             maxlen=Math.max(len,maxlen);
             r++;
         }
-        return maxlen;
+        return maxlen; //tc-0(2n)
     }
 }
