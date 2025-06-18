@@ -14,6 +14,6 @@ class Solution {
             }
             r++;
         }
-        return maxlen; //tc-0(2n)
+        return maxlen; //tc-0(n)
     }
 }
