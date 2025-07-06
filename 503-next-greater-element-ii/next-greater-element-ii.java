@@ -1,7 +1,7 @@
 class Solution {
     public int[] nextGreaterElements(int[] nums) {
         int n=nums.length;
-        int arr[]=new int[2*n];
+        /*int arr[]=new int[2*n];
         for(int i=0;i<n;i++){
             arr[i]=nums[i];
         }
@@ -27,6 +27,30 @@ class Solution {
         for(int i=0;i<n;i++){
             a[i]=greater[i];
         }
-        return a;
+        return a;*/
+        int a[]=new int[2*n];
+        int b[]=new int[2*n];
+        int g[]=new int[n];
+        //ArrayList<Integer>g=new ArrayList<>();
+        for(int i=0;i<a.length;i++){
+            a[i]=nums[i%n];
+        }
+        Stack<Integer> st=new Stack<>();
+        for(int i=a.length-1;i>=0;i--){
+            while(!st.isEmpty() && st.peek() <=a[i]){
+                st.pop();
+            }
+            if(st.isEmpty()){
+                b[i]=-1;
+            }
+            else{
+                b[i]=st.peek();
+            }
+            st.push(a[i]);
+        }
+        for(int i=0;i<n;i++){
+            g[i]=b[i];
+        }
+        return g;
     }
 }
