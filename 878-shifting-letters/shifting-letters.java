@@ -7,7 +7,7 @@ class Solution {
         StringBuilder sb=new StringBuilder();
         for(int i=0;i<s.length();i++){
             char ch=s.charAt(i);
-            ch=(char)((ch-'a'+shifts[i])%26+'a');
+            ch=(char)((ch-'a'+shifts[i]%26)%26+'a');
             sb.append(ch);
         }
         return (sb.toString());
