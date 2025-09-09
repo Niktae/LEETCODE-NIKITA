@@ -3,9 +3,7 @@ public class Solution {
         int n=nums.Length;
         int cnt=0;
         for(int i=0;i<=n-3;i++){
-            int j=i+2;
-            int k=j-1;
-            if((nums[i]+nums[j])*2==nums[k]){
+            if((nums[i]+nums[i+2])*2==nums[i+1]){
                 cnt++;
             }
         }
