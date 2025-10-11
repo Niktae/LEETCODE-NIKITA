@@ -9,7 +9,7 @@ class Solution {
         //for(Map.Entry<Integer,Integer>entry:hm.entrySet())
         List<Map.Entry<Integer,Integer>>list=new ArrayList<>(hm.entrySet());
         list.sort((a,b)->b.getValue().compareTo(a.getValue()));
-        for(int i=0;i<k && i<list.size();i++){
+        for(int i=0;i<k;i++){
             ans[i]=list.get(i).getKey();
         }
 
