@@ -5,6 +5,7 @@ class Solution {
                 original=2*original;
                 System.out.println( original+" ");
                 i=-1;
+               // continue;
             }
         }
         return original;
