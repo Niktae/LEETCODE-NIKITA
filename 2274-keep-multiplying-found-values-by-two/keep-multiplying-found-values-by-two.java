@@ -1,14 +1,11 @@
 class Solution {
     public int findFinalValue(int[] nums, int original) {
-        int n=nums.length;
-        int i=0;
-        while(i<n){
+        for(int i=0;i<nums.length;i++){
             if(nums[i]==original){
                 original=2*original;
-                i=0;
-                continue;
+                System.out.println( original+" ");
+                i=-1;
             }
-            i++;
         }
         return original;
     }
