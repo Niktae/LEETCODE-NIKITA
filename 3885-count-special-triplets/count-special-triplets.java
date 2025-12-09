@@ -20,7 +20,7 @@ class Solution {
             //Now put j in left
             left.put(nums[j],left.getOrDefault(nums[j],0L)+1);
         }
-        return (int)((ans%MOD)%MOD);
+        return (int)(ans%MOD);
 
     }
 }
